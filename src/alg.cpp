@@ -18,15 +18,15 @@ BST<std::string> makeTree(const char* filename) {
         }
         if (c >= 97 && c <= 122) {
             a += c;
-        }
-        else {
+        } else {
             if (!a.empty()) {
                 bst.add(a);
             }
             a.clear();
         }
+
     }
     bst.add(a);
-    file.close(); 
+    file.close();
     return bst;
 }
