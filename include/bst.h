@@ -4,7 +4,7 @@
 template<typename T>
 
 class BST {
-private:
+ private:
     struct Node {
         T value;
         int count;
@@ -36,7 +36,7 @@ private:
         h = 0;
         return root;
     }
-    int SEARCH(Node* &root, T value) {
+    int SEARCH(Node* root, T value) {
         int j = 0;
         if (root->value == value) {
             j = root->count;
@@ -50,7 +50,7 @@ private:
         return j;
     }
 
-public:
+ public:
     BST(): root(nullptr) {}
     void add(T value) {
         root = ADD(root, value);
